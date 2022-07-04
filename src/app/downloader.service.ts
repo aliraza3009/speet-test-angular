@@ -5,7 +5,7 @@ import { HttpClient, HttpRequest } from '@angular/common/http';
   providedIn: 'root',
 })
 export class DownloaderService {
-  fileUrl: string = 'assets/testfile.dat';
+  fileUrl: string = 'assets/testfile.dat?v=' + new Date().getTime();
   constructor(private http: HttpClient) {}
 
   downloadFile() {
