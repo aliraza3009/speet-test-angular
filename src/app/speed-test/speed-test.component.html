@@ -1,0 +1,23 @@
+<h1 class="" *ngIf="this.testState === 'START'">Press the button to start</h1>
+<h1 *ngIf="this.testState !== 'START'" class="mb-20">Current Speed</h1>
+<h2 *ngIf="this.testState !== 'START'" class="align-center speed-value mtb-20">{{ speed | number: '1.0-0' }}<small>{{
+        speedUnit }}</small></h2>
+<div *ngIf="this.testState === 'RUNNING'">
+    <mat-progress-bar mode="query"></mat-progress-bar>
+</div>
+
+<div class="button-start align-center mtb-20">
+
+    <button *ngIf="this.testState === 'START'" mat-fab color="primary" aria-label="icon-button with a start icon"
+        (click)="startTest()">
+        <mat-icon>start</mat-icon>
+    </button>
+    <button *ngIf="this.testState === 'RUNNING'" mat-fab color="primary" aria-label="icon-button with a stop icon"
+        (click)="stopTest()">
+        <mat-icon>stop</mat-icon>
+    </button>
+    <button *ngIf="this.testState === 'STOPPED'" mat-fab color="primary" aria-label="icon-button with a start icon"
+        (click)="startTest()">
+        <mat-icon>replay</mat-icon>
+    </button>
+</div>

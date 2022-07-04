@@ -1,0 +1,41 @@
+.align-center {
+    text-align: center;
+  }
+
+  .mtb-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mtb-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mt-10 {
+    margin-top: 10px;
+  }
+
+  .mb-10 {
+    margin-bottom: 10px;
+  }
+
+  .mt-20 {
+    margin-top: 20px;
+  }
+
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+
+
+  .speed-value {
+    font-size: 52px;
+}
+
+.speed-value small {
+    font-size: 50%;
+    transform: translateX(26px);
+    display: inline-block;
+    position: absolute;
+}
