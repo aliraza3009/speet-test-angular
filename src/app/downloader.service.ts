@@ -10,12 +10,6 @@ export class DownloaderService {
 
   downloadFile() {
     const request = new HttpRequest('GET', this.fileUrl, {
-      headers: new Headers({
-        'Cache-Control':
-          'no-cache, no-store, must-revalidate, post-check=0, pre-check=0',
-        Pragma: 'no-cache',
-        Expires: '0',
-      }),
       reportProgress: true,
       responseType: 'blob',
     });
